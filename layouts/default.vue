@@ -1,7 +1,7 @@
 <template>
   <div class="relative h-screen">
     <div class="sticky top-0 z-50">
-      <TopNav />
+      <NavBar />
     </div>
     <slot></slot>
     <FootTer />

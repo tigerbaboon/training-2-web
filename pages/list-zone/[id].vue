@@ -15,8 +15,7 @@
             <Icon class="w-[20px] h-[20px] text-white" name="mingcute:left-fill" />
         </div> -->
             <div class="" v-for="bander in promoteBanner" key="index">
-                <img v-for="photo in bander.images" key="p" class="w-[1200px] h-[175px]" :src="photo.url"
-                    alt="PhotoBanner">
+                <img class="w-[1200px] h-[175px]" :src="bander.image.url" alt="PhotoBanner">
             </div>
             <!-- ปุ่มกดเปลี่ยนหน้า -->
             <!-- <div @click="nextPage"
@@ -32,25 +31,26 @@
                 :class="{ 'bg-[#abc5dd]': currentPage !== index, 'bg-[#00AEEF]': currentPage === index }">
             </div>
         </div>
-
-
         <div class="w-full h-[170px] flex justify-center">
-            <div class="w-[960px] flex items-center gap-5" v-for="img in listZoneID?.image" key="i">
-                <!-- <div v-if="!listZoneID.length" class="w-[150px]">
+            <div class="w-[960px] flex items-center gap-5">
+                <div v-if="typeof(listZoneID.image) == 'object'" class="flex">
+                    <div class="w-[150px]">
+                        <img class="w-full h-full" :src="listZoneID.image?.url" alt="Zone">
+                    </div>
+                    <p class="text-[20px] pb-6">ที่พักในโซน " <span class="text-gray-800 font-semibold ">{{
+                        listZoneID?.zone_name }}</span> "</p>
+                </div>
+                <div v-else>
                     <div
                         class="flex justify-center items-center gap-2 w-full h-full bg-white border-[2px] border-sky-500 rounded-lg p-3 duration-[450ms]">
-                        <div class="w-[70px] h-[70px] border-8 border-t-[#22b6ed] border-gray-300 rounded-full animate-spin">
+                        <div
+                            class="w-[70px] h-[70px] border-8 border-t-[#22b6ed] border-gray-300 rounded-full animate-spin">
                         </div>
                     </div>
-                </div> -->
-                <div class="w-[150px]">
-                    <img class="w-full h-full" :src="img.url" alt="Zone">
                 </div>
-                <p class="text-[20px] pb-6">ที่พักในโซน " <span class="text-gray-800 font-semibold ">{{
-                    listZoneID?.zone_name }}</span> "</p>
+
             </div>
         </div>
-
         <!-- <div v-if="getHouse.length === 0" class="flex justify-center m-8">
             <div
                 class="flex justify-center items-center gap-2 w-[1200px] h-[404px] bg-white border-[2px] border-sky-500 rounded-lg p-3 duration-[450ms]">

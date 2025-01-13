@@ -8,12 +8,8 @@
       <div id="map" class="w-[1900px] h-[754px] relative "></div>
       <div class="absolute bottom-[110px] left-[30px] flex flex-col gap-3 z-10">
         <div class="flex flex-col gap-3 ">
-          <button
-            :class="`${getButtonClass('buy_house')}`"
-            @click="searchNearby('buy_house')">เช่า</button>
-          <button
-            :class="`${getButtonClass('sell_house')}`"
-            @click="searchNearby('sell_house')">ขาย</button>
+          <button :class="`${getButtonClass('buy_house')}`" @click="searchNearby('buy_house')">เช่า</button>
+          <button :class="`${getButtonClass('sell_house')}`" @click="searchNearby('sell_house')">ขาย</button>
         </div>
         <div class="flex gap-2">
           <button
@@ -361,7 +357,7 @@ function buildContent(property: any) {
       </span> -->
       <span class="text-gray-500 text-sm pl-6">${property.address}</span>
     </div>
-    <div class="flex items-end  space-x-4 text-gray-700 pl-5">
+    <div class="flex items-end  space-x-4 text-gray-700 pl-5 mt-1">
       <div class="flex items-start space-x-[5px]">
         <img class="w-4 h-4" src="https://img.icons8.com/?size=100&id=XXIRpM5ZLkpp&format=png&color=000000" />
         <span class="flex items-end">${property.number_of_rooms} ห้องนอน</span>
@@ -376,10 +372,22 @@ function buildContent(property: any) {
         <span class="flex items-end">${property.size} ตร.ม.</span>
       </div>
     </div>
-    <div class="flex items-start space-x-[5px]">
-    
-    </div>
+    <div class="flex justify-between">
+    <div class="flex items-start space-x-[5px] pl-5 mt-2">
+  <span class="px-2 py-1 text-sm font-medium text-green-600 border border-green-600 rounded">
+    ${property.sell_type}
   </span>
+  <span class="px-2 py-1 text-sm font-medium text-blue-500 border border-blue-500 rounded">
+    ${property.house_type}
+  </span>
+</div>
+<div class="flex justify-end mt-2">
+  <button class="px-2 py-1 text-white bg-blue-600 rounded hover:bg-blue-700">
+    รายละเอียด
+  </button>
+</div>
+  </span>
+  </div>
   `;
   } else {
     content.innerHTML = `
@@ -418,7 +426,22 @@ function buildContent(property: any) {
         <span class="flex items-end">${property.size} ตร.ม.</span>
       </div>
     </div>
+   <div class="flex justify-between">
+    <div class="flex items-start space-x-[5px] pl-5 mt-2">
+  <span class="px-2 py-1 text-sm font-medium text-orange-500 border border-orange-500 rounded">
+    ${property.sell_type}
   </span>
+  <span class="px-2 py-1 text-sm font-medium text-blue-500 border border-blue-500 rounded">
+    ${property.house_type}
+  </span>
+</div>
+<div class="flex justify-end mt-2">
+  <button class="px-2 py-1 text-white bg-blue-600 rounded hover:bg-blue-700">
+    รายละเอียด
+  </button>
+</div>
+  </span>
+  </div>
   `;
   }
   return content;
