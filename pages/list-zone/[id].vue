@@ -34,7 +34,7 @@
         <div class="w-full h-[170px] flex justify-center">
             <div class="w-[960px] flex items-center gap-5">
                 <div v-if="typeof(listZoneID.image) == 'object'" class="flex">
-                    <div class="w-[150px]">
+                    <div class="w-[150px] h-[105px]">
                         <img class="w-full h-full" :src="listZoneID.image?.url" alt="Zone">
                     </div>
                     <p class="text-[20px] pb-6">ที่พักในโซน " <span class="text-gray-800 font-semibold ">{{
