@@ -2,7 +2,7 @@
   <div class="flex justify-center w-full" v-for="(list, x) in lists" :key="x">
     <div class="md:flex w-full md:w-[1600px]">
       <div class="w-full md:w-[500px] border-x shadow-lg">
-        <div class="grid grid-cols-3 mt-3">
+        <div class="grid grid-cols-2 mt-3">
           <div
             @click="switchTab('fromDetail')"
             :class="{
@@ -25,7 +25,7 @@
           >
             รูปภาพ
           </div>
-          <div
+          <!-- <div
             @click="switchTab('inputMap')"
             :class="{
               'bg-blue-500 text-white shadow-md': activeTab === 'inputMap',
@@ -35,7 +35,7 @@
             class="h-[40px] md:h-[60px] cursor-pointer flex items-center justify-center px-4 rounded-lg transition-colors duration-200"
           >
             แผนที่
-          </div>
+          </div> -->
         </div>
         <!-- ปุ่มส่งข้อมูลประกาศลงบ้าน -->
         <div
@@ -429,12 +429,12 @@
                 <label
                   class="cursor-pointer relative group md:border-2 md:border-dashed md:border-gray-700 rounded-lg p-1 md:p-4 flex flex-col items-center justify-center hover:border-green-400 transition-all"
                 >
-                  <input
+                  <!-- <input
                     class="text-sm cursor-pointer hidden"
                     type="file"
                     multiple
                     @change="handleSingleImageUpload2"
-                  />
+                  /> -->
                   <div
                     class="hidden md:block absolute top-2 left-2 bg-green-400 text-white px-2 py-1 rounded-tr-lg"
                   >
@@ -522,6 +522,10 @@
         </p>
         <div class="border md:ml-10 mx-4 md:my-3 p-4 rounded-md shadow-lg">
           <div>
+            <pre>
+              {{ getHouse.datas.location_latitute }}
+              {{ getHouse.datas.location_longitute }}
+            </pre>
             <span class="text-gray-800 text-[16px] md:text-[24px]"
               >ชื่อบ้านเช่า :</span
             >
@@ -1020,7 +1024,6 @@ const description = ref<string>("");
 const itemsZone = ref<any[]>([]);
 const itemsDetail = ref<any[]>([]);
 const item_detail = ref<string[]>([]);
-const price = ref<number>(0);
 const newArray = ref<string[]>([]);
 const lat = ref<number | null>(null);
 const lng = ref<number | null>(null);
@@ -1096,8 +1099,14 @@ const updateByHome = async (id: string) => {
       getHouse.value.datas.contact_info.phone_number
     );
     formdata.append("line_id", getHouse.value.datas.contact_info.line_id);
-    formdata.append("location_latitute", lat.value?.toString());
-    formdata.append("location_longitute", lng.value?.toString());
+    formdata.append(
+      "location_latitute",
+      lat.value ? lat.value.toString() : getHouse.value.datas.location_latitute
+    );
+    formdata.append(
+      "location_longitute",
+      lng.value ? lng.value.toString() : getHouse.value.datas.location_longitute
+    );
     formdata.append("remainingImageIDs", remainingImageIDs);
     formdata.append("remainingImageMainID", remainingImageMainID);
 
