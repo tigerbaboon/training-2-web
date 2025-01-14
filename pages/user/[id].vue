@@ -522,10 +522,6 @@
         </p>
         <div class="border md:ml-10 mx-4 md:my-3 p-4 rounded-md shadow-lg">
           <div>
-            <pre>
-              {{ getHouse.datas.location_latitute }}
-              {{ getHouse.datas.location_longitute }}
-            </pre>
             <span class="text-gray-800 text-[16px] md:text-[24px]"
               >ชื่อบ้านเช่า :</span
             >
