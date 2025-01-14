@@ -38,7 +38,7 @@
                 disabled rows="13" cols="131">
                         {{ listLocation?.travel_detail }}
                     </textarea>
-            <div class="h-[2px] bg-gray-300 my-6"></div>
+            <!-- <div class="h-[2px] bg-gray-300 my-6"></div> -->
         </div>
     </div>
 </template>

@@ -6,9 +6,10 @@
           <div
             class="h-[696px] bg-[url('/assets/logo/photologin.jpg')] bg-cover rounded-r-[170px] flex items-center justify-center shadow-xl">
             <div class="w-[330px] h-[430px] bg-white opacity-75 rounded-xl shadow-2xl flex flex-col justify-between">
-              <div>
-                <nuxt-link to="/">
-                  <img class="w-[160px] m-5" src="/assets/logo/new.png" alt="zzz" />
+              <div class="my-10">
+                <nuxt-link to="/" >
+                  <!-- <img class="w-[160px] m-5" src="/assets/logo/new.png" alt="zzz" /> -->
+                  <span class="fontlogo  text-[32px] font-extrabold text-gray-700 ml-6 "> KK-Space.com</span>
                 </nuxt-link>
                 <div class="space-y-2">
                   <p class="text-[25px] text-gray-800 ml-5">
@@ -151,3 +152,11 @@ const onSubmit = async () => {
   }
 };
 </script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Oleo+Script:wght@400;700&family=Shrikhand&family=Sriracha&family=Yellowtail&display=swap');
+
+.fontlogo {
+  font-family: 'Shrikhand';
+}
+</style>

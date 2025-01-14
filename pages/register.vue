@@ -53,16 +53,21 @@
                 <div class="bg-white ">
                     <div
                         class=" bg-[url('/assets/logo/photologin.jpg')] bg-cover rounded-l-[170px] flex items-center justify-center h-full shadow-xl">
-                        <div class="w-[330px] h-[430px] bg-white opacity-75 rounded-xl shadow-2xl ">
+                        <div class="w-[330px] h-[430px] bg-white opacity-75 rounded-xl shadow-2xl">
+                            <div class="mt-10">
                                 <nuxt-link to="/">
-                                    <img class="w-[160px] m-5 " src="/assets/logo/new.png" alt="zzz">
+                                    <!-- <img class="w-[160px] m-5 " src="/assets/logo/new.png" alt="zzz"> -->
+                                    <span class="fontlogo  text-[32px] font-extrabold text-gray-700 ml-6 ">
+                                        KK-Space.com</span>
                                 </nuxt-link>
-                                <div class="space-y-2">
-                                    <p class="text-[25px] text-gray-800 ml-5">ยินดีต้อนรับ สู่ <br>จังหวัด ขอนแก่น</p>
-                                    <p class="text-[16px] text-gray-900 ml-5">เราดีใจที่ได้พบคุณอีกครั้ง
-                                        <br>เข้าถึงสิ่งที่อยากได้และคำแนะนำ
-                                    </p>
-                                </div>                      
+                            </div>
+
+                            <div class="space-y-2">
+                                <p class="text-[25px] text-gray-800 ml-5">ยินดีต้อนรับ สู่ <br>จังหวัด ขอนแก่น</p>
+                                <p class="text-[16px] text-gray-900 ml-5">เราดีใจที่ได้พบคุณอีกครั้ง
+                                    <br>เข้าถึงสิ่งที่อยากได้และคำแนะนำ
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -182,6 +187,11 @@ onMounted(() => {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Oleo+Script:wght@400;700&family=Shrikhand&family=Sriracha&family=Yellowtail&display=swap');
+
+.fontlogo {
+  font-family: 'Shrikhand';
+}
 .loader {
     border: 3px solid #f3f3f3;
     border-top: 3px solid #00AEEF;

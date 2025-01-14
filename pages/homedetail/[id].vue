@@ -249,7 +249,7 @@
             <div class="text-center p-3 bg-sky-500/10 rounded-md shadow-md" v-for="(list, f) in listHomeID.amenity"
               :key="f">
               <p class="flex items-center justify-start gap-[6px] pl-16">
-                <Icon class="w-[20px] h-[20px] text-sky-950" :name="list?.icons = '' : '' ?" />
+                <Icon class="w-[20px] h-[20px] text-sky-950" :name="list?.icons"/>
                 <span class="text-gray-800">{{ list.name }}</span>
               </p>
             </div>

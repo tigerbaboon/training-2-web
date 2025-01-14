@@ -1,8 +1,9 @@
 <template>
   <div
-    class="w-full h-[50px] md:h-[80px] lg:h-[110px] bg-gradient-to-r from-[#00cbef] via-[#26b7ec] to-[#00AEEF] flex justify-between items-center">
-    <nuxt-link class="w-[80px] md:w-[120px] lg:w-[190px] h-[40px] md:h-[60px] lg:h-[80px] flex items-center" to="/">
-      <img class="w-full h-full ml-3 lg:ml-5" src="/assets/logo/new.png" alt="Logo" />
+    class="w-full h-[50px] md:h-[80px] lg:h-[110px] bg-gradient-to-r from-[#00AEEF] to-[#0bbfdf] flex justify-between items-center">
+    <nuxt-link class="w-[80px] md:w-[120px] lg:w-[550px] h-[40px] md:h-[60px] lg:h-[110px] flex items-center" to="/">
+      <!-- <img class="w-full h-full ml-3 lg:ml-5" src="/assets/logo/1Logo.png" alt="Logo" /> -->
+      <span class="fontlogo text-[50px] font-extrabold text-white ml-10 "> KK-Space.com</span>
     </nuxt-link>
     <div class="flex md:gap-[1px] lg:gap-1">
       <div class="flex items-center gap-1 md:gap-2 lg:gap-4">
@@ -19,7 +20,7 @@
         </nuxt-link> -->
 
         <nuxt-link to="/mymap/mymap"
-          class="px-4 py-2 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#22b6ed] transition duration-300 ease-in-out">
+          class="px-4 py-2 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#0bbfdf] transition duration-300 ease-in-out">
           ค้นหาที่พักใกล้ฉัน
         </nuxt-link>
 
@@ -36,7 +37,7 @@
         </nuxt-link> -->
 
         <nuxt-link to="/from-home/fromnew"
-          class="px-4 py-2 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#22b6ed] transition duration-300 ease-in-out">
+          class="px-4 py-2 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#0bbfdf] transition duration-300 ease-in-out">
           ลงทะเบียนบ้านฟรี
         </nuxt-link>
 
@@ -65,11 +66,11 @@
         </nuxt-link> -->
 
         <nuxt-link to="/login" v-if="!token"
-          class="px-4 py-2 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#22b6ed] transition duration-300 ease-in-out">
+          class="px-4 py-2 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#0bbfdf] transition duration-300 ease-in-out">
           เข้าสู่ระบบ
         </nuxt-link>
         <nuxt-link to="/user/" v-else
-          class="flex justify-center items-center gap-1 px-4 py-2 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#22b6ed] transition duration-300 ease-in-out">
+          class="flex justify-center items-center gap-1 px-4 py-2 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#0bbfdf] transition duration-300 ease-in-out">
           <Icon name="tabler:user-filled" />
           <span class="font-bold">{{ username }}</span>
         </nuxt-link>
@@ -87,7 +88,7 @@
         </div> -->
 
         <div @click="toggleShow"
-          class="flex items-center justify-center px-4 py-2 cursor-pointer border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#22b6ed] transition duration-300 ease-in-out mr-5">
+          class="flex items-center justify-center px-4 py-2 cursor-pointer border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#22b6ed] transition duration-300 ease-in-out mr-10">
           <Icon class="w-6 h-6" name="ic:sharp-search" />
         </div>
       </div>
@@ -363,6 +364,12 @@ const decrementMaxPrice = () => {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Oleo+Script:wght@400;700&family=Shrikhand&family=Sriracha&family=Yellowtail&display=swap');
+
+.fontlogo {
+  font-family: 'Shrikhand';
+}
+
 /* ซ่อน Slider Thumb เดิม */
 input[type="range"].slider::-webkit-slider-thumb {
   appearance: none;

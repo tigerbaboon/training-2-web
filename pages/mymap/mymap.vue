@@ -5,69 +5,72 @@
       <div class="w-20 h-20 border-8 border-t-[#22b6ed] border-gray-300 rounded-full animate-spin"></div>
     </div>
     <div v-else>
-      <div id="map" class="w-[1900px] h-[754px] relative "></div>
-      <div class="absolute bottom-[110px] left-[30px] flex flex-col gap-3 z-10">
-        <div class="flex flex-col gap-3 ">
-          <button :class="`${getButtonClass('buy_house')}`" @click="searchNearby('buy_house')">เช่า</button>
-          <button :class="`${getButtonClass('sell_house')}`" @click="searchNearby('sell_house')">ขาย</button>
-        </div>
-        <div class="flex gap-2">
-          <button
-            :class="`${getButtonClass('hospital')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
-            @click="searchNearby('hospital')">
-            สถานบริการด้านสุขภาพ
-          </button>
-          <button
-            :class="`${getButtonClass('school')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
-            @click="searchNearby('school')">
-            โรงเรียน
-          </button>
-          <button
-            :class="`${getButtonClass('convenience_store')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
-            @click="searchNearby('convenience_store')">
-            ร้านสะดวกซื้อ
-          </button>
-          <button
-            :class="`${getButtonClass('restaurant')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
-            @click="searchNearby('restaurant')">
-            อาหารและเครื่องดื่ม
-          </button>
-          <button
-            :class="`${getButtonClass('grocery_or_supermarket')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
-            @click="searchNearby('grocery_or_supermarket')">
-            ซุปเปอร์มาร์เก็ต
-          </button>
-          <button
-            :class="`${getButtonClass('cafe')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
-            @click="searchNearby('cafe')">
-            คาเฟ่
-          </button>
-          <button
-            :class="`${getButtonClass('bank')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
-            @click="searchNearby('bank')">
-            ธนาคาร
-          </button>
-          <button
-            :class="`${getButtonClass('bar')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
-            @click="searchNearby('bar')">
-            สถานบันเทิง
-          </button>
-          <button
-            :class="`${getButtonClass('pharmacy')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
-            @click="searchNearby('pharmacy')">
-            ร้านขายยา
-          </button>
-          <button
-            :class="`${getButtonClass('gas_station')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
-            @click="searchNearby('gas_station')">
-            ปั๊มน้ำมัน
-          </button>
+      <div class="w-[1900px] h-[754px] relative">
+        <div id="map" class="w-full h-full  "></div>
+        <div class="absolute bottom-[30px] left-[30px] flex flex-col gap-3 z-10">
+          <div class="flex flex-col gap-3 ">
+            <button :class="`${getButtonClass('buy_house')}`" @click="searchNearby('buy_house')">เช่า</button>
+            <button :class="`${getButtonClass('sell_house')}`" @click="searchNearby('sell_house')">ขาย</button>
+          </div>
+          <div class="flex gap-2">
+            <button
+              :class="`${getButtonClass('hospital')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
+              @click="searchNearby('hospital')">
+              สถานบริการด้านสุขภาพ
+            </button>
+            <button
+              :class="`${getButtonClass('school')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
+              @click="searchNearby('school')">
+              โรงเรียน
+            </button>
+            <button
+              :class="`${getButtonClass('convenience_store')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
+              @click="searchNearby('convenience_store')">
+              ร้านสะดวกซื้อ
+            </button>
+            <button
+              :class="`${getButtonClass('restaurant')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
+              @click="searchNearby('restaurant')">
+              อาหารและเครื่องดื่ม
+            </button>
+            <button
+              :class="`${getButtonClass('grocery_or_supermarket')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
+              @click="searchNearby('grocery_or_supermarket')">
+              ซุปเปอร์มาร์เก็ต
+            </button>
+            <button
+              :class="`${getButtonClass('cafe')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
+              @click="searchNearby('cafe')">
+              คาเฟ่
+            </button>
+            <button
+              :class="`${getButtonClass('bank')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
+              @click="searchNearby('bank')">
+              ธนาคาร
+            </button>
+            <button
+              :class="`${getButtonClass('bar')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
+              @click="searchNearby('bar')">
+              สถานบันเทิง
+            </button>
+            <button
+              :class="`${getButtonClass('pharmacy')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
+              @click="searchNearby('pharmacy')">
+              ร้านขายยา
+            </button>
+            <button
+              :class="`${getButtonClass('gas_station')} text-white text-[14px] font-medium px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300`"
+              @click="searchNearby('gas_station')">
+              ปั๊มน้ำมัน
+            </button>
+          </div>
         </div>
       </div>
 
+
     </div>
-    <div :class="['transition-all duration-700 ease-in-out  ']" :style="{ maxHeight: isMapVisible ? '600px' : '0px' }">
-    </div>
+    <!-- <div :class="['transition-all duration-700 ease-in-out  ']" :style="{ maxHeight: isMapVisible ? '600px' : '0px' }">
+    </div> -->
   </div>
   <!-- <pre>{{ properties }}</pre> -->
 </template>
@@ -377,12 +380,12 @@ function buildContent(property: any) {
   <span class="px-2 py-1 text-sm font-medium text-green-600 border border-green-600 rounded">
     ${property.sell_type}
   </span>
-  <span class="px-2 py-1 text-sm font-medium text-blue-500 border border-blue-500 rounded">
+  <span class="px-2 py-1 text-sm font-medium text-[#00AEEF] border border-[#00AEEF] rounded">
     ${property.house_type}
   </span>
 </div>
 <div class="flex justify-end mt-2">
-  <button class="px-2 py-1 text-white bg-blue-600 rounded hover:bg-blue-700">
+  <button class="px-3 z-30 py-1 bg-[#00AEEF] rounded-[3px] text-white font-semibold relative after:-z-20 after:absolute after:h-1 after:w-1 after:bg-sky-800 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-500 transition-all duration-500 text-md">
     รายละเอียด
   </button>
 </div>
@@ -431,12 +434,12 @@ function buildContent(property: any) {
   <span class="px-2 py-1 text-sm font-medium text-orange-500 border border-orange-500 rounded">
     ${property.sell_type}
   </span>
-  <span class="px-2 py-1 text-sm font-medium text-blue-500 border border-blue-500 rounded">
+  <span class="px-2 py-1 text-sm font-medium text-[#00AEEF] border border-[#00AEEF] rounded">
     ${property.house_type}
   </span>
 </div>
 <div class="flex justify-end mt-2">
-  <button class="px-2 py-1 text-white bg-blue-600 rounded hover:bg-blue-700">
+  <button class="px-3 z-30 py-1 bg-[#00AEEF] rounded-[3px] text-white font-semibold relative after:-z-20 after:absolute after:h-1 after:w-1 after:bg-sky-800 after:left-5 overflow-hidden after:bottom-0 after:translate-y-full after:rounded-md after:hover:scale-[300] after:hover:transition-all after:hover:duration-700 after:transition-all after:duration-500 transition-all duration-500 text-md">
     รายละเอียด
   </button>
 </div>
@@ -541,7 +544,7 @@ function CreateHomeBuyAndSale(marker: any, property: any, category: any) {
       ${property.house_type}
     </span>
   </div>`;
-  tooltip.className = "absolute top-[-35px] left-[-25px] z-10 hidden";
+  tooltip.className = "absolute top-[-31px] left-[-27px] z-10 hidden";
 
 
 

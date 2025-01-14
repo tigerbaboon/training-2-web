@@ -1,5 +1,5 @@
 <template>
-  <div class="relative h-screen">
+  <div class="relative ">
     <div class="sticky top-0 z-50">
       <NavBar />
     </div>

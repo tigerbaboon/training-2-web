@@ -3,7 +3,8 @@
     <div class="w-[1200px] pt-2">
       <div class="w-full  bg-white rounded-lg shadow-md p-4 mb-2">
         <div class="text-center mb-8">
-          <img src="/assets/logo/new.png" alt="Profile Picture" class="w-[250px] py-5 mx-auto" />
+          <!-- <img src="/assets/logo/new.png" alt="Profile Picture" class="w-[250px] py-5 mx-auto" /> -->
+          <span class="fontlogo text-[30px] font-extrabold text-gray-700 ml-6 "> KK-Space.com</span>
           <div class="flex justify-center items-center gap-1">
             <Icon name="lets-icons:user-alt-fill" size="25px" />
             <p class="text-xl font-bold">{{ profile.username }}</p>
@@ -58,7 +59,7 @@
       </div>
       <!-- หน้าข้อมูลส่วนตัว -->
       <div v-if="activeTab === 'phofile'" class="flex justify-center  bg-white rounded-lg shadow-md px-10 py-8">
-        <div class="p-7 w-full h-full rounded-lg">
+        <div class="p-7 w-full h-[489px] rounded-lg">
           <h2 class="text-3xl font-semibold text-gray-800 mb-6">
             ข้อมูลส่วนตัว
           </h2>
@@ -305,3 +306,10 @@ const onLogout = () => {
   location.reload();
 };
 </script>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Oleo+Script:wght@400;700&family=Shrikhand&family=Sriracha&family=Yellowtail&display=swap');
+
+.fontlogo {
+  font-family: 'Shrikhand';
+}
+</style>
