@@ -2,7 +2,7 @@
   <div class="flex justify-center w-full" v-for="(list, x) in lists" :key="x">
     <div class="md:flex w-full md:w-[1600px]">
       <div class="w-full md:w-[500px] border-x shadow-lg">
-        <div class="grid grid-cols-3 mt-3">
+        <div class="grid grid-cols-2 mt-3">
           <div @click="switchTab('fromDetail')" :class="{
             'bg-blue-500 text-white shadow-md': activeTab === 'fromDetail',
             'bg-gray-100 text-gray-700 hover:bg-gray-200':
@@ -19,14 +19,14 @@
             class="h-[40px] md:h-[60px] cursor-pointer flex items-center justify-center px-4 rounded-lg transition-colors duration-200">
             รูปภาพ
           </div>
-          <div @click="switchTab('inputMap')" :class="{
+          <!-- <div @click="switchTab('inputMap')" :class="{
             'bg-blue-500 text-white shadow-md': activeTab === 'inputMap',
             'bg-gray-100 text-gray-700 hover:bg-gray-200':
               activeTab !== 'inputMap',
           }"
             class="h-[40px] md:h-[60px] cursor-pointer flex items-center justify-center px-4 rounded-lg transition-colors duration-200">
             แผนที่
-          </div>
+          </div> -->
         </div>
         <!-- ปุ่มส่งข้อมูลประกาศลงบ้าน -->
         <div
@@ -229,7 +229,7 @@
             </div>
           </div>
           <!-- ใส่ข้อมูลแผนที่ -->
-          <div class="w-full" v-if="activeTab === 'inputMap'">
+          <!-- <div class="w-full" v-if="activeTab === 'inputMap'">
             <h1 class="text-[22px] md:text-[30px] text-center py-2 font-bold text-gray-800">
               ที่ตั้งที่พักของคุณ
             </h1>
@@ -248,10 +248,10 @@
               </div>
               <div class="w-full flex justify-end">
                 <div class="flex gap-3 md:gap-5 pt-2">
-                  <!-- <button
+                  <button
                     class="xl:w-[110px] lg:w-[70px] xl:h-[35px] lg:h-[28px] bg-red-500 content-center text-center lg:text-[14px] text-white rounded-md shadow-lg">
                     ยกเลิก
-                  </button> -->
+                  </button>
                   <button
                     class="md:w-[120px] w-[100px] h-[40px] bg-green-500 content-center text-center text-[16px] md:text-[18px] text-white rounded-md shadow-lg"
                     @click="updateMap">
@@ -260,7 +260,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <!-- แสดงรายละเอียดต่างๆที่ใส่ใน input -->
